@@ -109,6 +109,7 @@ a[class] {
 }
 
 /* =====ABOUT ============ */
+
 .about {
   background: #F6F8FA;
   padding: 150px 0 144px;
@@ -129,6 +130,7 @@ a[class] {
 }
 
 /* ======EXPERTISE ======== */
+
 .expertise {
   padding: 140px 0 160px;
 }
@@ -145,8 +147,8 @@ a[class] {
 .expertise__info {
   width: 370px;
   margin-right: 30px;
-  font: none;
-  margin-bottom: 10px;
+  flex: none;
+  margin-top: 10px;
 }
 
 .expertise__info-item {
@@ -183,7 +185,7 @@ a[class] {
   margin-bottom: 25px;
 }
 
-.expertise__item {
+.expertise__items {
   display: flex;
   justify-content: space-between;
 }
@@ -191,6 +193,25 @@ a[class] {
 .expertise__item {
   width: 370px;
   padding-left: 85px;
+  position: relative;
+}
+
+.expertise__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.expertise__item--design::before {
+  background-image: url('../images/design-icon.svg');
+}
+.expertise__item--dev::before {
+  background-image: url('../images/monitor-icon.svg');
+}
+.expertise__item--marketing::before {
+  background-image: url('../images/speaker-icon.svg');
 }
 
 .expertise__item-title {
@@ -207,6 +228,7 @@ a[class] {
 }
 
 /*======== MAGIC =========*/
+
 .magic {
   background-color: #F6F6FA;
   background-image: url('../images/magic-bg.jpg');
@@ -230,6 +252,7 @@ a[class] {
 }
 
 /*============= PORTFOLIO ====================-->*/
+
 .portfolio {
   padding: 140px 0 165px;
 }
